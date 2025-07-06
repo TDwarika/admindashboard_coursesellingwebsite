@@ -45,7 +45,7 @@ function AddCourse() {
                     <Button size={"large"} style={{ backgroundColor: "#132043" }}
                         variant="contained"
                         onClick={async () => {
-                            const res=await axios.post("http://localhost:3000/admin/courses", {
+                            const res=await axios.post("https://admindashboard-7bg4.onrender.com/admin/courses", {
 
                                 title: title,
                                 description: description,

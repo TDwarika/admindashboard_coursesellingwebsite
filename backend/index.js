@@ -7,7 +7,10 @@ const userRoutes = require('./routes/user');
 const path = require('path');
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://admindashboard-7bg4.onrender.com/'
+}));
+
 // Connect to MongoDB
 mongoose.connect('mongodb+srv://tangududwarika18:lKP93a6ltCvGgrnh@cluster0.moern1l.mongodb.net/courses', { useNewUrlParser: true, useUnifiedTopology: true, dbName: "courses" });
 
@@ -21,6 +24,7 @@ app.get('*', (_, res) => {
   res.sendFile(path.resolve(_dirname, "frontend", "dist", "index.html"));
 })
 
-app.listen(3000, () => {
-  console.log('Server is listening on port 3000');
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });

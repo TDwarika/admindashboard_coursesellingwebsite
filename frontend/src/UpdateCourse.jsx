@@ -16,7 +16,7 @@ function UpdateCourse() {
     const { courseId } = useParams();
     const [open, setOpen] = useState(false);
     useEffect(() => {
-        axios.get("http://localhost:3000/admin/courses/" + courseId, {
+        axios.get("https://admindashboard-7bg4.onrender.com/admin/courses/" + courseId, {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             }
@@ -129,7 +129,7 @@ function Update(props) {
                         style={{ backgroundColor: "#132043" }}
                         onClick={async () => {
                             const res = await axios.put(
-                                "http://localhost:3000/admin/courses/" + courseId,
+                                "https://admindashboard-7bg4.onrender.com/admin/courses/" + courseId,
                                 {
                                     title: title,
                                     description: description,

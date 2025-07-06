@@ -41,7 +41,7 @@ function SignUp() {
                     <Button size={"large"} style={{ marginTop: 40, backgroundColor: "#132043" }}
                         variant="contained" onClick={async () => {
 
-                            const res = await axios.post("http://localhost:3000/admin/signup", {
+                            const res = await axios.post("https://admindashboard-7bg4.onrender.com/admin/signup", {
                                 username: email,
                                 password: password
                             })

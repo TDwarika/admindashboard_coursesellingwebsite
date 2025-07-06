@@ -37,7 +37,7 @@ function Init() {
    const setUser = useSetRecoilState(userState);
    const initUser = async () => {
       try {
-         const response = await axios.get("http://localhost:3000/admin/me", {
+         const response = await axios.get("https://admindashboard-7bg4.onrender.com/admin/me", {
             headers: {
                "Authorization": "Bearer " + localStorage.getItem("token")
             }

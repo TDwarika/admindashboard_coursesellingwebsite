@@ -7,7 +7,7 @@ function Courses() {
     
     const [courses, setCourses] = useState([]);
     useEffect(() => {
-        axios.get("http://localhost:3000/admin/courses", {
+        axios.get("https://admindashboard-7bg4.onrender.com/admin/courses", {
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
             }
@@ -59,7 +59,7 @@ function Item(props) {
                         Edit
                     </Button>
                     <Button style={{ marginLeft: 50, backgroundColor: "#132043" }} variant="contained" size={"medium"} onClick={async () => {
-                        const res = await axios.delete("http://localhost:3000/admin/courses/" + props.course._id,
+                        const res = await axios.delete("https://admindashboard-7bg4.onrender.com/admin/courses/" + props.course._id,
                             {
                                 headers: {
                                     "Authorization": "Bearer " + localStorage.getItem("token")

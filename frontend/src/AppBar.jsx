@@ -8,7 +8,7 @@ function AppBar() {
     const [admin, setAdmin] = useState(null);
     //isLoading can be used here to avoid the flash instead you will flash of empty.
     useEffect(() => {
-        fetch("http://localhost:3000/admin/me", {
+        fetch("https://admindashboard-7bg4.onrender.com/admin/me", {
             method: "GET",
             headers: {
                 "Authorization": "Bearer " + localStorage.getItem("token")
